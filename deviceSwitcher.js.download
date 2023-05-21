@@ -1,0 +1,189 @@
+(function () {
+    var devicesBtn = document.querySelectorAll('.js-add-btn');
+    var mainBg = document.querySelector('.js-change-bg');
+    var backgroundWhats = document.querySelector('.js-change-whatsapp');
+    backgroundWhats.classList.add("animation__picture-appear-animation");
+    var leftBubble = document.querySelector('.js-change-whatsapp__left-bubble');
+    leftBubble.classList.add("animation__bubble-appear__left");
+    var topBubble = document.querySelector('.js-change-whatsapp__top-bubble');
+    topBubble.classList.add("animation__bubble-appear__top");
+    var rightBubble = document.querySelector('.js-change-whatsapp__right-bubble');
+    rightBubble.classList.add('animation__bubble-appear__right');
+    var leftTopSquare = document.querySelector('.js-change-telegram__leftTop-square');
+    var rightTopSquare = document.querySelector('.js-change-telegram__rightTop-square');
+    var rightBottomSquare = document.querySelector('.js-change-telegram__rightBottom-square');
+    var leftBottomSquare = document.querySelector('.js-change-telegram__leftBottom-square');
+
+    var leftTopTriangle = document.querySelector('.js-change-viber__leftTop-triangle');
+    var rightTopTriangle = document.querySelector('.js-change-viber__rightTop-triangle');
+    var rightBottomTriangle = document.querySelector('.js-change-viber__rightBottom-triangle');
+    var leftBottomTriangle = document.querySelector('.js-change-viber__leftBottom-triangle');
+    var backgroundtelegram = document.querySelector('.js-change-telegram');
+    var backgroundViber = document.querySelector('.js-change-viber');
+    var textHeader = document.querySelector('.js-change-header');
+    var textDescription = document.querySelector('.js-change-text');
+    var wrapper = document.querySelector('.device-switch');
+    var whatsappLinks = document.querySelector('.js-link-whatsapp');
+    var telegramLinks = document.querySelector('.js-link-telegram');
+    var viberLinks = document.querySelector('.js-link-viber');
+    var currentBtnId = 'app-whatsapp-btn';
+    devicesBtn.forEach((device) => {
+        device.addEventListener("click", deviceClick);
+    });
+    if (location.hash) {
+        devicesBtn.forEach(function (device) {
+            device.classList.remove('app-btn--active');
+        });
+        switch (location.hash) {
+            case '#last-seen-whatsapp':
+                document.getElementById("app-whatsapp-btn").classList.add('app-btn--active');
+                showWhatsApp();
+                hideWhatsApp();
+                break;
+            case '#last-seen-telegram':
+                document.getElementById("app-telegram-btn").classList.add('app-btn--active');
+                showTelegram();
+                hideTelegram();
+                break;
+            case '#last-seen-viber':
+                document.getElementById("app-viber-btn").classList.add('app-btn--active');
+                showViber();
+                hideViber();
+                break;
+            default:
+                document.getElementById("app-whatsapp-btn").classList.add('app-btn--active');
+                break;
+        }
+    } else {
+        document.getElementById("app-whatsapp-btn").classList.add('app-btn--active');
+    }
+
+    function deviceClick() {
+        devicesBtn.forEach(function (device) {
+            device.classList.remove('app-btn--active');
+        });
+
+        switch (this.id) {
+            case 'app-whatsapp-btn':
+                showWhatsApp();
+                break;
+            case 'app-telegram-btn':
+                showTelegram();
+                break;
+            case 'app-viber-btn':
+                showViber();
+                break;
+        }
+        currentBtnId = this.id;
+
+        switch (currentBtnId) {
+            case 'app-whatsapp-btn':
+                hideWhatsApp();
+                break;
+            case 'app-telegram-btn':
+                hideTelegram();
+                break;
+            case 'app-viber-btn':
+                hideViber();
+                break;
+        }
+
+
+        this.classList.add('app-btn--active');
+    }
+
+    function showWhatsApp() {
+        whatsappLinks.classList.remove('display-none');
+        telegramLinks.classList.add('display-none');
+        viberLinks.classList.add('display-none');
+        textHeader.innerHTML = "Last Seen"
+        textDescription.innerHTML = "Last Seen is the best easy-to-use app for keeping track of your family's online activity. Developed with the entire family in mind, Last Seen notifies you when your children and other family members go online and offline on messengers and gives you valuable insights into their online activity."
+
+        mainBg.classList.remove('divided-block__picture-main--telegram');
+        mainBg.classList.remove('divided-block__picture-main--viber');
+        mainBg.classList.add('divided-block__picture-main--whatsapp');
+
+        leftBubble.classList.add("animation__bubble-appear__left");
+        topBubble.classList.add("animation__bubble-appear__top");
+        rightBubble.classList.add('animation__bubble-appear__right');
+        backgroundWhats.classList.add('animation__picture-appear-animation');
+    }
+
+    function hideWhatsApp() {
+        backgroundtelegram.classList.remove('animation__picture-appear-animation');
+        leftTopSquare.classList.remove("animation__square-appear__leftTop");
+        rightTopSquare.classList.remove("animation__square-appear__rightTop");
+        rightBottomSquare.classList.remove("animation__square-appear__rightBottom");
+        leftBottomSquare.classList.remove("animation__square-appear__leftBottom");
+        backgroundViber.classList.remove('animation__picture-appear-animation');
+        leftTopTriangle.classList.remove("animation__triangle-appear__leftTop");
+        rightTopTriangle.classList.remove("animation__triangle-appear__rightTop");
+        rightBottomTriangle.classList.remove("animation__triangle-appear__rightBottom");
+        leftBottomTriangle.classList.remove("animation__triangle-appear__leftBottom");
+    }
+
+    function showTelegram() {
+        telegramLinks.classList.remove('display-none');
+        whatsappLinks.classList.add('display-none');
+        viberLinks.classList.add('display-none');
+        textHeader.innerHTML = "Last Seen Telegram"
+        textDescription.innerHTML = "Last Seen is there for you to monitor the online activities of your loved ones and ensure they are safe and secure every single day. Designed to be user-friendly and intuitive, Last Seen Telegram will provide you with detailed reports on how much time your kids spend in the messenger."
+
+        mainBg.classList.remove('divided-block__picture-main--whatsapp');
+        mainBg.classList.remove('divided-block__picture-main--viber');
+        mainBg.classList.add('divided-block__picture-main--telegram');
+
+        backgroundWhats.classList.add('animation__picture-fade-animation');
+        backgroundtelegram.classList.add('animation__picture-appear-animation');
+        leftTopSquare.classList.add("animation__square-appear__leftTop");
+        rightTopSquare.classList.add("animation__square-appear__rightTop");
+        rightBottomSquare.classList.add("animation__square-appear__rightBottom");
+        leftBottomSquare.classList.add("animation__square-appear__leftBottom");
+    }
+
+    function hideTelegram() {
+        leftBubble.classList.remove("animation__bubble-appear__left");
+        topBubble.classList.remove("animation__bubble-appear__top");
+        rightBubble.classList.remove('animation__bubble-appear__right');
+        backgroundWhats.classList.remove('animation__picture-appear-animation');
+        backgroundViber.classList.remove('animation__picture-appear-animation');
+        leftTopTriangle.classList.remove("animation__triangle-appear__leftTop");
+        rightTopTriangle.classList.remove("animation__triangle-appear__rightTop");
+        rightBottomTriangle.classList.remove("animation__triangle-appear__rightBottom");
+        leftBottomTriangle.classList.remove("animation__triangle-appear__leftBottom");
+    }
+
+    function showViber() {
+        textHeader.innerHTML = "Last Seen Viber"
+        textDescription.innerHTML = "Last Seen is a reliable and simple-to-use monitoring tool that lets you stay in the know about your loved ones’ real-time online activity on Viber. Learn how much time your kids or other family members spend online, receive detailed last seen reports, and get instantly notified once their online status changes."
+
+        viberLinks.classList.remove('display-none');
+        telegramLinks.classList.add('display-none');
+        whatsappLinks.classList.add('display-none');
+
+        mainBg.classList.remove('divided-block__picture-main--whatsapp');
+        mainBg.classList.remove('divided-block__picture-main--telegram');
+        mainBg.classList.add('divided-block__picture-main--viber');
+
+        backgroundViber.classList.add('animation__picture-appear-animation');
+        leftTopTriangle.classList.add("animation__triangle-appear__leftTop");
+        rightTopTriangle.classList.add("animation__triangle-appear__rightTop");
+        rightBottomTriangle.classList.add("animation__triangle-appear__rightBottom");
+        leftBottomTriangle.classList.add("animation__triangle-appear__leftBottom");
+    }
+
+    function hideViber() {
+        backgroundWhats.classList.remove('animation__picture-appear-animation');
+        backgroundtelegram.classList.remove('animation__picture-appear-animation');
+
+        leftBubble.classList.remove("animation__bubble-appear__left");
+        topBubble.classList.remove("animation__bubble-appear__top");
+        rightBubble.classList.remove('animation__bubble-appear__right');
+
+        leftTopSquare.classList.remove("animation__square-appear__leftTop");
+        rightTopSquare.classList.remove("animation__square-appear__rightTop");
+        rightBottomSquare.classList.remove("animation__square-appear__rightBottom");
+        leftBottomSquare.classList.remove("animation__square-appear__leftBottom");
+    }
+})
+();

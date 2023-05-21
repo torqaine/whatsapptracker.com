@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="132" height="132" viewBox="0 0 132 132">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7eaff2"/>
+      <stop offset="1" stop-color="#bed8fb"/>
+    </linearGradient>
+    <clipPath id="clip-reports">
+      <rect width="132" height="132"/>
+    </clipPath>
+  </defs>
+  <g id="reports" clip-path="url(#clip-reports)">
+    <rect width="132" height="132" fill="#fff"/>
+    <g id="reports-2" data-name="reports" transform="translate(-880 -3109.202)">
+      <g id="Iconly_Bold_Document" data-name="Iconly/Bold/Document" transform="translate(926.25 3124.404)">
+        <g id="Document" transform="translate(0)">
+          <path id="Document-2" data-name="Document" d="M49.467,75H18.036C6.574,75,0,68.384,0,56.849V18.114C0,12.5,1.64,7.886,4.744,4.768S12.445,0,18.036,0H49.467C60.927,0,67.5,6.6,67.5,18.114V56.849c0,5.79-1.572,10.311-4.673,13.435S55.228,75,49.467,75ZM18.744,51.511a2.926,2.926,0,0,0-2.507,1.4,2.948,2.948,0,0,0,2.447,4.523,2.627,2.627,0,0,0,.365-.024h29.4a2.963,2.963,0,0,0,0-5.886h-29.4A3,3,0,0,0,18.744,51.511Zm.3-17.089a2.926,2.926,0,0,0,0,5.852h29.4a2.926,2.926,0,0,0,0-5.852Zm0-16.983v.037l-.011,0a2.923,2.923,0,0,0,.011,5.845H30.26a2.943,2.943,0,0,0,0-5.886Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Прямоугольник_1521" data-name="Прямоугольник 1521" transform="translate(897 3151)" fill="rgba(218,246,246,0.6)" stroke="rgba(255,255,255,0.3)" stroke-width="2">
+        <rect width="68" height="75" rx="16" stroke="none"/>
+        <rect x="1" y="1" width="66" height="73" rx="15" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.221" height="175.315" viewBox="0 0 210.221 175.315">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c6c1f9"/>
+      <stop offset="1" stop-color="#9283f1"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1050" data-name="Group 1050" transform="translate(-212.459 -364.828)">
+    <g id="noun-triangle-1384033" transform="translate(545.753 566.498) rotate(162)">
+      <path id="Path_1567" data-name="Path 1567" d="M140.282,123.122l-47.617,79.5a11.258,11.258,0,0,0,9.615,16.868h95.258a11.258,11.258,0,0,0,9.615-16.868l-47.641-79.5a11.236,11.236,0,0,0-19.23,0Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="noun-triangle-1384033-2" data-name="noun-triangle-1384033" transform="translate(443.212 256.501) rotate(80)">
+      <path id="Path_1567-2" data-name="Path 1567" d="M154.328,124.672,93.1,226.9a14.477,14.477,0,0,0,12.364,21.692h122.5A14.477,14.477,0,0,0,240.321,226.9L179.057,124.672a14.449,14.449,0,0,0-24.729,0Z" transform="translate(0)" fill="rgba(218,212,255,0.6)" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
