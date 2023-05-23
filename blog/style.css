@@ -1,0 +1,19 @@
+/* Center the content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Add styles to the content */
+.main-content {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add additional styles as needed */
